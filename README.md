@@ -2,7 +2,7 @@
 An auto-generating implementation of Nathan Bingham's college football imperialism map in Python with Folium.
 For more information, visit https://www.sbnation.com/college-football/2018/9/4/17816706/college-football-imperialism-map-week-1-2018 .
 
-![alt text](https://raw.githubusercontent.com/ryanpmeyer/CFBImperialism/master/preseason_map.PNG)
+![img](https://raw.githubusercontent.com/ryanpmeyer/CFBImperialism/master/preseason_map_preview.PNG)
 
 
 College football imperialism rules:
