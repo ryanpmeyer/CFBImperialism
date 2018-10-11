@@ -1,27 +1,33 @@
 from math import radians, sin, cos, sqrt, atan
 from scipy.cluster.vq import kmeans
 from bs4 import BeautifulSoup
+from pathlib import Path
 import pandas as pd
 import numpy as np
 import folium
 import json
+import os
+
 
 curr_week = 7
+
+curr_dir, curr_file = os.path.split(os.path.abspath(__file__))
+dir = Path(curr_dir)
 
 def generate_json(week):
     if (week == "_pre"):
         generate_starting_counties()
         return
     elif (week == 0):
-        input_filename = "week_pre.json"
+        input_filename = dir / "json" / "week_pre.json"
     else:
-        input_filename = "week{}.json".format(week - 1)
+        input_filename = dir / "json" / "week{}.json".format(week - 1)
     counties = pd.read_json(input_filename)['features']
     json_out = {"type" : "FeatureCollection", "features" : []}
     results = {} #loser : winner
 
     ###Get scores from html
-    html = open("week{}.html".format(week))
+    html = open(dir / "NCAA_scores" / "week{}.html".format(week))
     soup = BeautifulSoup(html, "html.parser")
     teams = map(
         lambda x : x.get_text(),
@@ -75,14 +81,14 @@ def generate_json(week):
                 json_out['features'][i]['school'] = results[school]
                 json_out['features'][i]['color'] = schools['Color'][index]
 
-    output_file = open("week{}.json".format(week), "w")
+    output_file = open(str(dir / "json" / "week{}.json".format(week)), "w")
     output_file.write(json.dumps(json_out))
     output_file.close()
 
 def generate_map(week, logos_enabled = True, schools_enabled = False):
     CENTER = (39.8283, -98.5795)
     DEFAULT_ZOOM = 4
-    geojson_filename = "week{}.json".format(week)
+    geojson_filename = dir / "json" / "week{}.json".format(week)
 
     map = folium.Map(
         location = CENTER,
@@ -100,7 +106,7 @@ def generate_map(week, logos_enabled = True, schools_enabled = False):
 
     def draw_counties(geojson_filename):
         folium.GeoJson(
-            data = geojson_filename,
+            data = str(geojson_filename),
             name = 'geojson',
             style_function = style
         ).add_to(map)
@@ -146,17 +152,17 @@ def generate_map(week, logos_enabled = True, schools_enabled = False):
             "Logo"      : logos
         })
 
-    draw_counties('week{}.json'.format(week))
+    draw_counties(dir / "json" / "week{}.json".format(week))
     folium.LayerControl().add_to(map)
     if(logos_enabled):
         draw_logos()
     if(schools_enabled):
         draw_schools()
-    map.save('map_week{}.html'.format(week))
+    map.save(str(dir / "output_maps" / "map_week{}.html".format(week)))
 
 
 def generate_starting_counties():
-    county_data = pd.read_json('counties_lowres.json', precise_float = True)['features']
+    county_data = pd.read_json(dir / "json" / "counties_lowres.json", precise_float = True)['features']
     def polygon_center(vertices):
         if(len(vertices) < 2):
             vertices = vertices[0]
@@ -216,7 +222,7 @@ def generate_starting_counties():
             county['school'] = schools['School'][i]
             new_geojson["features"].append(county)
 
-    output_file2 = open("week_pre.json", "w")
+    output_file2 = open(str(dir / "json" / "week_pre.json"), "w")
     output_file2.write(json.dumps(new_geojson))
     output_file2.close()
 
