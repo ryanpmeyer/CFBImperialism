@@ -10,6 +10,9 @@ College football imperialism rules:
   2) If a team loses to another team that is represented in my spreadsheet, all of their land will go to the victor.
   3) Ties will cause both teams to keep their respective land areas.
   4) The map is generated on a weekly basis, meaning that all games throughout the week through Saturday will affect that week's land changes.
+  
+Dependencies:
+  This program currently makes use of the following modules: folium, pandas, scipy, BeautifulSoup4.
     
 Some implementation details:
   The program draws a geojson overlay on top of the United States, where the color style parameters are determined by the owning team's primary color. This was done by finding a US county geojson file and adding extra data to each county representing the team name and hex value of the color, and exporting this information into a new geojson file with pandas. To get game results, the program scrapes data from the HTML of NCAA.com's football scores page. Out of respect for their site's servers, I have and will continue to simply save a copy of the html from my browser and scraping the scores from that each week, since these sports websites tend to frown upon bots/scripts requesting data from them all the time. In drawing the logos over the areas on the map, the program uses the k-means algorithm to identify clustered counties and find the approximate center of each cluster. This is not perfect, as currently there is no good way to automatically know how many clusters should be identified. As of right now, the program overcomes this by giving each school a starting k value (the Washington Huskies for example can't have a starting k = 1 because it owns most of the state of Washington and Alaska, and it would appear more natural to have a logo over each of those land masses), and transferring that k value along with the land when a school loses a game.
