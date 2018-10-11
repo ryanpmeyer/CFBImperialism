@@ -2,6 +2,9 @@
 An auto-generating implementation of Nathan Bingham's college football imperialism map in Python with Folium.
 For more information, visit https://www.sbnation.com/college-football/2018/9/4/17816706/college-football-imperialism-map-week-1-2018 .
 
+![alt text](https://raw.githubusercontent.com/ryanpmeyer/CFBImperialism/master/preseason_map.PNG)
+
+
 College football imperialism rules:
   1) All FBS teams begin the season owning the counties which are closest to their stadium (or school in a few cases). This distance is defined by the great circle distance between the long/latitudal coordinates of the stadium and the centroid of the polygon formed by the county's boundaries.
   2) If a team loses to another team that is represented in my spreadsheet, all of their land will go to the victor.
