@@ -6,10 +6,20 @@ import pandas as pd
 import numpy as np
 import folium
 import json
+import sys
 import os
 
+supported_years = list(range(2017, 2019))
 
-curr_week = 7
+if (len(sys.argv) == 1):
+    curr_week = 7
+    year = 2018
+else:
+    curr_week = 17
+    year = int(sys.argv[1])
+    if (year not in supported_years):
+        sys.exit("Invalid argument: {} is not currently a supported year.".format(year))
+
 
 curr_dir, curr_file = os.path.split(os.path.abspath(__file__))
 dir = Path(curr_dir)
@@ -19,15 +29,15 @@ def generate_json(week):
         generate_starting_counties()
         return
     elif (week == 0):
-        input_filename = dir / "json" / "week_pre.json"
+        input_filename = dir / "json" / str(year) / "week_pre.json"
     else:
-        input_filename = dir / "json" / "week{}.json".format(week - 1)
+        input_filename = dir / "json" / str(year) / "week{}.json".format(week - 1)
     counties = pd.read_json(input_filename)['features']
     json_out = {"type" : "FeatureCollection", "features" : []}
     results = {} #loser : winner
 
     ###Get scores from html
-    html = open(dir / "NCAA_scores" / "week{}.html".format(week))
+    html = open(dir / "NCAA_scores" / str(year) / "week{}.html".format(week))
     soup = BeautifulSoup(html, "html.parser")
     teams = map(
         lambda x : x.get_text(),
@@ -56,39 +66,46 @@ def generate_json(week):
         team_2, score_2 = games[i+1]
         score_1, score_2 = int(score_1), int(score_2)
         if (score_1 < score_2):
-            results[team_1] = team_2
+            if team_1 not in results:
+                results[team_1] = []
+            results[team_1].append(team_2)
         elif (score_2 < score_1):
-            results[team_2] = team_1
+            if team_2 not in results:
+                results[team_2] = []
+            results[team_2].append(team_1)
 
     ###Update K values for K means
     for loser in results.keys():
-        winner = results[loser]
-        w_index = find_school(winner)
-        l_index = find_school(loser)
-        if (w_index != -1 and l_index != -1):
-            schools['K'][w_index] += schools['K'][l_index]
-            schools['K'][l_index] = 0
-            school_centroids[w_index].extend(school_centroids[l_index])
-            school_centroids[l_index] = []
+        winners = results[loser]
+        for winner in  winners:
+            w_index = find_school(winner)
+            l_index = find_school(loser)
+            if (w_index != -1 and l_index != -1):
+                schools['K'][w_index] += schools['K'][l_index]
+                schools['K'][l_index] = 0
+                school_centroids[w_index].extend(school_centroids[l_index])
+                school_centroids[l_index] = []
 
     ###Recolor and relabel counties based on winners/losers
     for i in range(len(counties)):
         school = counties[i]['school']
         json_out['features'].append(counties[i])
         if school in results.keys(): #if school is a loser
-            index = find_school(results[school])
-            if (index != -1):
-                json_out['features'][i]['school'] = results[school]
-                json_out['features'][i]['color'] = schools['Color'][index]
+            winners = results[school]
+            for winner in winners:
+                index = find_school(winner)
+                if (index != -1):
+                    json_out['features'][i]['school'] = winner
+                    json_out['features'][i]['color'] = schools['Color'][index]
 
-    output_file = open(str(dir / "json" / "week{}.json".format(week)), "w")
+    output_file = open(str(dir / "json" / str(year) / "week{}.json".format(week)), "w")
     output_file.write(json.dumps(json_out))
     output_file.close()
 
 def generate_map(week, logos_enabled = True, schools_enabled = False):
     CENTER = (39.8283, -98.5795)
     DEFAULT_ZOOM = 4
-    geojson_filename = dir / "json" / "week{}.json".format(week)
+    geojson_filename = dir / "json" / str(year) / "week{}.json".format(week)
 
     map = folium.Map(
         location = CENTER,
@@ -152,13 +169,13 @@ def generate_map(week, logos_enabled = True, schools_enabled = False):
             "Logo"      : logos
         })
 
-    draw_counties(dir / "json" / "week{}.json".format(week))
+    draw_counties(dir / "json" / str(year) / "week{}.json".format(week))
     folium.LayerControl().add_to(map)
     if(logos_enabled):
         draw_logos()
     if(schools_enabled):
         draw_schools()
-    map.save(str(dir / "output_maps" / "map_week{}.html".format(week)))
+    map.save(str(dir / "output_maps" / str(year) / "map_week{}.html".format(week)))
 
 
 def generate_starting_counties():
@@ -222,7 +239,7 @@ def generate_starting_counties():
             county['school'] = schools['School'][i]
             new_geojson["features"].append(county)
 
-    output_file2 = open(str(dir / "json" / "week_pre.json"), "w")
+    output_file2 = open(str(dir / "json" / str(year) /"week_pre.json"), "w")
     output_file2.write(json.dumps(new_geojson))
     output_file2.close()
 
