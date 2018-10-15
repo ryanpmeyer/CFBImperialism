@@ -12,7 +12,7 @@ import os
 supported_years = list(range(2017, 2019))
 
 if (len(sys.argv) == 1):
-    curr_week = 7
+    curr_week = 8
     year = 2018
 else:
     curr_week = 17
