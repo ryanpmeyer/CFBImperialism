@@ -24,7 +24,7 @@ ACC,Clemson,CLEM,Tigers,#522D80,34.678748,-82.843195,1,http://a.espncdn.com/i/te
 D1 Independents,Coastal Caro.,,Chanticleers,#006f71 ,33.792865,-79.017494,1,https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/Coastal_Carolina_Chanticleers_logo.svg/1200px-Coastal_Carolina_Chanticleers_logo.svg.png,,
 Pac-12,Colorado,COLO,Buffalo,#CFB87C ,40.009456,-105.266922,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/38.gif,,http://espn.go.com/college-football/team/_/id/38/colorado-buffaloes
 Mountain West,Colorado St.,COST,Rams,#1E4D2B ,40.562113,-105.141616,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/36.gif,,http://espn.go.com/college-football/team/_/id/36/colorado-St.-rams
-American,Connecticut,CONN,Huskies,#000E2F,41.759623,-72.618818,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/41.gif,,http://espn.go.com/college-football/team/_/id/41/connecticut-huskies
+American,Uconn,CONN,Huskies,#000E2F,41.759623,-72.618818,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/41.gif,,http://espn.go.com/college-football/team/_/id/41/connecticut-huskies
 ACC,Duke,DUKE,Blue Devils,#001A57,35.995405,-78.941655,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/150.gif,,http://espn.go.com/college-football/team/_/id/150/duke-blue-devils
 American,East Carolina,ECAR,Pirates,#592A8A ,35.596473,-77.365265,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/151.gif,,http://espn.go.com/college-football/team/_/id/151/east-carolina-pirates
 MAC,Eastern Mich.,EMIC,Eagles,#006633,42.255924,-83.647372,1,https://i.pinimg.com/originals/51/8b/42/518b42c841d7197e7d25f6207f41f7c9.png,,http://espn.go.com/college-football/team/_/id/2199/eastern-michigan-eagles
@@ -72,8 +72,8 @@ Sun Belt,New Mexico St.,NMST,Aggies,#861F41 ,32.279635,-106.741094,1,http://a.es
 ACC,North Carolina,UNC,Tar Heels,#7BAFD4 ,35.906956,-79.047869,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/153.gif,,http://espn.go.com/college-football/team/_/id/153/north-carolina-tar-heels
 Conference USA,North Texas,NTEX,Mean Green,#00853E ,33.203939,-97.159241,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/249.gif,,http://espn.go.com/college-football/team/_/id/249/north-texas-mean-green
 MAC,Northern Ill.,NILL,Huskies,#BA0C2F ,41.933955,-88.777814,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2459.gif,,http://espn.go.com/college-football/team/_/id/2459/northern-illinois-huskies
-Big Ten,Northwestern,NW,Wildcats,#4E2A84 ,42.065413,-87.692494,1,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Northwestern_Wildcats_logo.svg/1200px-Northwestern_Wildcats_logo.svg.png,,http://espn.go.com/college-football/team/_/id/77/northwestern-wildcats
-D1 Independents,Notre Dame,ND,Fighting Irish,#0C2340 ,41.698399,-86.233928,1,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Notre_Dame_Fighting_Irish_logo.svg/1138px-Notre_Dame_Fighting_Irish_logo.svg.png,,http://espn.go.com/college-football/team/_/id/87/notre-dame-fighting-irish
+Big Ten,Northwestern,NW,Wildcats,#4E2A84 ,42.065413,-87.692494,1,https://b.fssta.com/uploads/content/dam/fsdigital/fscom/global/dev/static_resources/ncaaf/teams/retina/32.vresize.200.200.medium.0.png,,http://espn.go.com/college-football/team/_/id/77/northwestern-wildcats
+D1 Independents,Notre Dame,ND,Fighting Irish,#b09043 ,41.698399,-86.233928,1,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Notre_Dame_Fighting_Irish_logo.svg/1138px-Notre_Dame_Fighting_Irish_logo.svg.png,,http://espn.go.com/college-football/team/_/id/87/notre-dame-fighting-irish
 MAC,Ohio,OHIO,Bobcats,#CDA077 ,39.321,-82.10296,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/195.gif,,http://espn.go.com/college-football/team/_/id/195/ohio-bobcats
 Big Ten,Ohio St.,OSU,Buckeyes,#BB0000 ,40.001648,-83.019731,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/194.gif,,http://espn.go.com/college-football/team/_/id/194/ohio-St.-buckeyes
 Big 12,Oklahoma,OU,Sooners,#841617 ,35.205847,-97.442313,1,https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Oklahoma_Sooners_logo.svg/795px-Oklahoma_Sooners_logo.svg.png,,http://espn.go.com/college-football/team/_/id/201/oklahoma-sooners
@@ -84,7 +84,7 @@ Pac-12,Oregon,ORE,Ducks,#154733 ,44.058277,-123.06851,1,https://cdn.bleacherrepo
 Pac-12,Oregon St.,ORST,Beavers,#dc4405 ,44.559537,-123.281379,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/204.gif,,http://espn.go.com/college-football/team/_/id/204/oregon-St.-beavers
 Big Ten,Penn St.,PSU,Nittany Lions,#EEEEEE ,40.812212,-77.856112,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/213.gif,,http://espn.go.com/college-football/team/_/id/213/penn-St.-nittany-lions
 ACC,Pittsburgh,PITT,Panthers,#cdb87d ,40.44679,-80.015768,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/221.gif,,http://espn.go.com/college-football/team/_/id/221/pittsburgh-panthers
-Big Ten,Purdue,PUR,Boilermakers,#ceb888 ,40.434432,-86.918436,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2509.gif,,http://espn.go.com/college-football/team/_/id/2509/purdue-boilermakers
+Big Ten,Purdue,PUR,Boilermakers,#080808,40.434432,-86.918436,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2509.gif,,http://espn.go.com/college-football/team/_/id/2509/purdue-boilermakers
 Conference USA,Rice,RICE,Owls,#C1C6C8 ,29.716329,-95.409317,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/242.gif,,http://espn.go.com/college-football/team/_/id/242/rice-owls
 Big Ten,Rutgers,RUTG,Scarlet Knights,#5F6A72 ,40.513563,-74.465303,1,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/1200px-Rutgers_Scarlet_Knights_logo.svg.png,,http://espn.go.com/college-football/team/_/id/164/rutgers-scarlet-knights
 Mountain West,San Diego St.,SDSU,Aztecs,#2B2F37 ,32.783143,-117.119561,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/21.gif,,http://espn.go.com/college-football/team/_/id/21/san-diego-St.-aztecs
@@ -92,14 +92,14 @@ Mountain West,San Jose St.,SJST,Spartans,#0055A2 ,37.319725,-121.868291,1,http:/
 American,SMU,SMET,Mustangs,#354CA1,32.837744,-96.782753,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2567.gif,,http://espn.go.com/college-football/team/_/id/2567/southern-methodist-mustangs
 Sun Belt,South Ala.,,Jaguars,#BF0D3E ,30.67307,-88.075614,1,https://upload.wikimedia.org/wikipedia/en/thumb/6/69/South_Alabama_Jaguars_logo.svg/1200px-South_Alabama_Jaguars_logo.svg.png,,
 SEC,South Carolina,USCE,Gamecocks,#73000A ,33.97309,-81.019183,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2579.gif,,http://espn.go.com/college-football/team/_/id/2579/south-carolina-gamecocks
-Conference USA,Southern Miss,SMIS,Golden Eagles,#FFAB00 ,31.329019,-89.33123,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2572.gif,,http://espn.go.com/college-football/team/_/id/2572/southern-miss-golden-eagles
+Conference USA,Southern Miss.,SMIS,Golden Eagles,#FFAB00 ,31.329019,-89.33123,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2572.gif,,http://espn.go.com/college-football/team/_/id/2572/southern-miss-golden-eagles
 Pac-12,Stanford,STAN,Cardinal ,#8C1515 ,37.434501,-122.161095,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/24.gif,,http://espn.go.com/college-football/team/_/id/24/stanford-cardinal
 ACC,Syracuse,SYR,Orangemen,#D44500 ,43.036219,-76.136372,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/183.gif,,http://espn.go.com/college-football/team/_/id/183/syracuse-orange
 Big 12,TCU,TCU,Horded Frogs,#4d1979 ,32.709638,-97.368092,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2628.gif,,http://espn.go.com/college-football/team/_/id/2628/tcu-horned-frogs
 American,Temple,TEMP,Owls,#9D2235 ,39.900797,-75.167458,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/218.gif,,http://espn.go.com/college-football/team/_/id/218/temple-owls
 SEC,Tennessee,TENN,Volunteers,#58595B ,35.957992,-83.924975,1,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tennessee_Volunteers_logo.svg/2000px-Tennessee_Volunteers_logo.svg.png,,http://espn.go.com/college-football/team/_/id/2633/tennessee-volunteers
 SEC,Texas A&M,TAMU,Aggies,#500000 ,30.609797,-96.340385,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/245.gif,,http://espn.go.com/college-football/team/_/id/245/texas-aggies
-Big 12,Texas,UT,Longhorns,#333f48 ,30.283659,-97.732531,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/251.gif,,http://espn.go.com/college-football/team/_/id/251/texas-longhorns
+Big 12,Texas,UT,Longhorns,#bf5700 ,30.283659,-97.732531,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/251.gif,,http://espn.go.com/college-football/team/_/id/251/texas-longhorns
 Sun Belt,Texas St.,,Bobcats,#501214 ,29.891032,-97.92553,1,https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Texas_State_Bobcats_logo.svg/200px-Texas_State_Bobcats_logo.svg.png,,
 Big 12,Texas Tech,TTU,Red Raiders,#CC0000 ,33.591066,-101.87291,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2641.gif,,http://espn.go.com/college-football/team/_/id/2641/texas-tech-red-raiders
 MAC,Toledo,TOLE,Rockets,#15397F ,41.65728,-83.613579,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2649.gif,,http://espn.go.com/college-football/team/_/id/2649/toledo-rockets
@@ -107,9 +107,9 @@ Sun Belt,Troy,TROY,Trojans,#9E0531 ,31.799559,-85.951844,1,http://a.espncdn.com/
 American,Tulane,TULE,Green Wave,#006747 ,29.944613,-90.116702,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2655.gif,,http://espn.go.com/college-football/team/_/id/2655/tulane-green-wave
 American,Tulsa,TULS,Golden Hurricane,#002D72 ,36.148876,-95.943782,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/202.gif,,http://espn.go.com/college-football/team/_/id/202/tulsa-golden-hurricane
 Conference USA,UAB,UAB,Blazers,#006341 ,33.511491,-86.842652,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/5.gif,,http://espn.go.com/college-football/team/_/id/5/uab-blazers
-American,UCF,UCF,Golden Knights,#FFC904,28.608262,-81.192621,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2116.gif,,http://espn.go.com/college-football/team/_/id/2116/ucf-knights
+American,UCF,UCF,Golden Knights,#ba9b37 ,28.608262,-81.192621,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2116.gif,,http://espn.go.com/college-football/team/_/id/2116/ucf-knights
 Pac-12,UCLA,UCLA,Bruins,#2d68c4 ,34.069912,-118.445338,1,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD3n_d27o337gsVIYocsVwWb0pl-jFZV5hGG6M_7gRaqLhsfzQ,,http://espn.go.com/college-football/team/_/id/26/ucla-bruins
-Sun Belt,ULM,,Warhawks,#800029,32.530923,-92.065978,1,https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Louisiana%E2%80%93Monroe_Warhawks_logo.svg/1200px-Louisiana%E2%80%93Monroe_Warhawks_logo.svg.png,,
+Sun Belt,La.-Monroe,,Warhawks,#800029,32.530923,-92.065978,1,https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Louisiana%E2%80%93Monroe_Warhawks_logo.svg/1200px-Louisiana%E2%80%93Monroe_Warhawks_logo.svg.png,,
 D1 Independents,Massachusetts,,Minutemen,#572932 ,42.377314,-72.53603,1,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/UMass_Amherst_Athletics_logo.svg/1200px-UMass_Amherst_Athletics_logo.svg.png,,
 Mountain West,UNLV,UNLV,Runnin Rebels,#b10202 ,36.086254,-115.016722,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2439.gif,,http://espn.go.com/college-football/team/_/id/2439/unlv-rebels
 Pac-12,Southern California,USC,Trojans,#990000 ,34.01404,-118.288008,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/30.gif,,http://espn.go.com/college-football/team/_/id/30/usc-trojans
@@ -129,3 +129,87 @@ Conference USA,Western Ky.,WKU,Hilltoppers,#c60c30 ,36.984751,-86.4594,1,http://
 MAC,Western Mich.,WMIC,Broncos,#6C4023 ,42.285751,-85.601093,1,http://a.espncdn.com/i/teamlogos/ncaa/med/trans/2711.gif,,http://espn.go.com/college-football/team/_/id/2711/western-michigan-broncos
 Big Ten,Wisconsin,WISC,Badgers,#9b0000 ,43.069936,-89.412678,1,https://cdn.bleacherreport.net/images/team_logos/328x328/wisconsin_badgers_football.png,,http://espn.go.com/college-football/team/_/id/275/wisconsin-badgers
 Mountain West,Wyoming,WYO,Cowboys,#492f24 ,41.311701,-105.568263,1,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wyoming_Athletics_logo.svg/2000px-Wyoming_Athletics_logo.svg.png,,http://espn.go.com/college-football/team/_/id/2751/wyoming-cowboys
+,Liberty,,,#0A254E ,37.354495,-79.175057,0,https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Liberty_Flames_wordmark.svg/1200px-Liberty_Flames_wordmark.svg.png,,
+,Idaho St.,,,#ff6600 ,42.870354,-112.428582,0,https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Idaho_State_Bengals_logo.svg/1200px-Idaho_State_Bengals_logo.svg.png,,
+,Alabama St.,,,#C99700 ,32.364849,-86.290321,0,https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Alabama_State_Hornets_logo.svg/1200px-Alabama_State_Hornets_logo.svg.png,,
+,Ark.-Pine Bluff,,,#FDB913,34.25462,-92.02125,0,https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Arkansas%E2%80%93Pine_Bluff_Golden_Lions_wordmark.svg/1200px-Arkansas%E2%80%93Pine_Bluff_Golden_Lions_wordmark.svg.png,,
+,Houston Baptist,,,#10069F,29.695108,-95.51666,0,https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Houston_Baptist_Huskies_logo.svg/1200px-Houston_Baptist_Huskies_logo.svg.png,,
+,Tennessee St.,,,#00539F,36.168464,-86.826907,0,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Tennessee_State_Tigers_wordmark.svg/1200px-Tennessee_State_Tigers_wordmark.svg.png,,
+,Duquesne,,,#041E42 ,40.435752,-79.990005,0,https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Duquesne_Dukes_logo.svg/1200px-Duquesne_Dukes_logo.svg.png,,
+,Texas Southern,,,#72263D ,29.75232,-95.352522,0,https://banner2.kisspng.com/20180511/ure/kisspng-texas-southern-university-texas-southern-tigers-fo-5af60d10d696a9.130050711526074640879.jpg,,
+,McNeese St.,,,#00529b,30.17646,-93.174104,0,https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/McNeese_State_Athletics_logo.svg/1200px-McNeese_State_Athletics_logo.svg.png,,
+,Gardner-Webb,,,#bf2f37,35.245743,-81.673544,0,https://cdn.herosports.com/upload/school/school-logo/gardner-webb-logo.png,,
+,N.C. Central,,,#6D2C3E ,35.974109,-78.896976,0,http://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2428.png,,
+,Illinois St.,,,#ce1126 ,40.512713,-88.996675,0,https://cdn.herosports.com/upload/school/school-logo/illinois-state-logo.png,,
+,Maine,,,#B0D7FF ,,,0,http://content.sportslogos.net/logos/32/738/full/d9hffxnbekh1wlckvnge.gif,,
+,Southern Utah,,,#C41424,,,0,https://i.pinimg.com/originals/f7/71/b4/f771b4d8844e5a573add804d1420e53d.png,,
+,Prairie View,,,#4f2582,,,0,https://cdn.herosports.com/upload/school/school-logo/prairie-view-am-logo.png,,
+,Eastern Wash.,,,#FF0000 ,,,0,http://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fncaa%2F500%2F331.png,,
+,UNI,,,#470A68,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Northern_Iowa_Panters_logo.svg/1200px-Northern_Iowa_Panters_logo.svg.png,,
+,Delaware St.,,,#72CDF4 ,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Delaware_State_Hornets_logo.svg/1200px-Delaware_State_Hornets_logo.svg.png,,
+,Alabama A&M,,,#862633,,,0,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Alabama_A%26M_Bulldogs_logo.svg/2000px-Alabama_A%26M_Bulldogs_logo.svg.png,,
+,Bethune-Cookman,,,#800001,,,0,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Bethune%E2%80%93Cookman_Wildcats_logo.svg/1200px-Bethune%E2%80%93Cookman_Wildcats_logo.svg.png,,
+,New Hampshire,,,#003591 ,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/6/62/New_Hampshire_Wildcats_logo.svg/1200px-New_Hampshire_Wildcats_logo.svg.png,,
+,Wofford,,,#886E4C ,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Wofford_Terriers_logo.svg/1200px-Wofford_Terriers_logo.svg.png,,
+,Eastern Ky.,,,#4c151e,,,0,http://www.championshipsubdivision.com/images/teamlogos/eastern-kentucky.png,,
+,Lehigh,,,#8b4513,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/6/65/LehighMountainHawks.svg/1200px-LehighMountainHawks.svg.png,,
+,UC Davis,,,#000E2F,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/1/13/UC_Davis_Aggies_logo.svg/1200px-UC_Davis_Aggies_logo.svg.png,,
+,Rhode Island,,,#68abe8 ,,,0,https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Rhode_Island_Rams_logo.svg/1200px-Rhode_Island_Rams_logo.svg.png,,
+,Murray St.,,,#ECAC00,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Murray_State_Racers_logo.svg/1200px-Murray_State_Racers_logo.svg.png,,
+,Tennessee Tech,,,#4F2984 ,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Tennessee_Tech_Golden_Eagles_logo.svg/1200px-Tennessee_Tech_Golden_Eagles_logo.svg.png,,
+,Campbell,,,#EA7125,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Campbell_Fighting_Camels_logo.svg/1200px-Campbell_Fighting_Camels_logo.svg.png,,
+,Sacramento St.,,,#043927,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Sacramento_State_Hornets_logo.svg/1200px-Sacramento_State_Hornets_logo.svg.png,,
+,Nicholls St.,,,#862633,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Nicholls_State_Colonels_logo.svg/1200px-Nicholls_State_Colonels_logo.svg.png,,
+,Incarnate Word,,,#CB333B,,,0,https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Incarnate_Word_Cardinals_logo.svg/1200px-Incarnate_Word_Cardinals_logo.svg.png,,
+,Western Ill.,,,#663399,,,0,http://a.espncdn.com/i/teamlogos/ncaa/500/2710.png,,
+,Samford,,,#002649,,,0,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZA0vM_iuEX1zPzQ0KB1o8tqdOgt81bozGG_FNsmLF9ZufsxP6ag,,
+,Savannah St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Weber St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Missouri St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Southeastern La.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Northwestern St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Monmouth,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Portland St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,James Madison,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Villanova,,,#00205b ,,,0,https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Villanova_Wildcats_logo.svg/2000px-Villanova_Wildcats_logo.svg.png,,
+,Southern U.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Furman,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Alcorn St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Howard,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Stony Brook,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Austin Peay,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Albany (NY),,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,UT Martin,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Eastern Ill.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Elon,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Fordham,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,South Carolina St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Richmond,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Jackson St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Grambling,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Central Ark.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,South Dakota,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Mercer,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,VMI,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Southeast Mo. St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Northern Ariz.,,,#003466,,,0,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Northern_Arizona_Athletics_logo.svg/1200px-Northern_Arizona_Athletics_logo.svg.png,,
+,Stephen F. Austin,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Charleston So.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Abilene Christian,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,South Dakota St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,N.C. A&T,,,#004684 ,,,0,https://cdn.bleacherreport.net/images/team_logos/328x328/north_carolina_at_basketball.png,,
+,Townson,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Holy Cross,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,William & Mary,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Wagner,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Morgan St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Howard,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Southern Ill.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Lamar,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,East Tenn. St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,North Dakota,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Youngstown St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,South Carolina St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Indiana St.,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Florida A&M,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,
+,Towson,,,#FFFFFF,,,0,https://banner2.kisspng.com/20180320/btw/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e1e44023.2850921615215390419349.jpg,,

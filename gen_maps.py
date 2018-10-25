@@ -49,7 +49,7 @@ def generate_json(week):
     def find_school(name):
         index = -1
         for j in range(len(schools.values)):
-            if schools['School'][j] == name:
+            if schools['School'][j].lower() == name.lower():
                 index = j
                 break
         if index == -1:
@@ -77,8 +77,8 @@ def generate_json(week):
             w_index = find_school(winner)
             l_index = find_school(loser)
             if (w_index != -1 and l_index != -1):
-                schools['K'][w_index] += schools['K'][l_index]
-                schools['K'][l_index] = 0
+                schools.loc[w_index, 'K'] += schools.loc[l_index, 'K']
+                schools.loc[l_index, 'K'] = 0
                 school_centroids[w_index].extend(school_centroids[l_index])
                 school_centroids[l_index] = []
 
@@ -216,11 +216,12 @@ def generate_starting_counties():
             min_dist = float('inf')
             school_index = None
             for j in range(len(schools.values)):
-                location = [schools['Lat'][j], schools['Long'][j]]
-                dist = haversine_distance(centroid, location)
-                if dist < min_dist:
-                    min_dist = dist
-                    school_index = j
+                if (schools['K'][j] > 0):
+                    location = [schools['Lat'][j], schools['Long'][j]]
+                    dist = haversine_distance(centroid, location)
+                    if dist < min_dist:
+                        min_dist = dist
+                        school_index = j
             county_matrix[school_index].append(i)
             school_centroids[school_index].append(centroid)
         return county_matrix
