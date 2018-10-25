@@ -11,14 +11,10 @@ import os
 
 supported_years = list(range(2017, 2019))
 
-if (len(sys.argv) == 1):
-    curr_week = 8
-    year = 2018
-else:
-    curr_week = 17
-    year = int(sys.argv[1])
-    if (year not in supported_years):
-        sys.exit("Invalid argument: {} is not currently a supported year.".format(year))
+year = int(sys.argv[1])
+if (year not in supported_years):
+    sys.exit("Invalid argument: {} is not currently a supported year.".format(year))
+curr_week = int(sys.argv[2])
 
 
 curr_dir, curr_file = os.path.split(os.path.abspath(__file__))
@@ -247,6 +243,6 @@ schools = pd.read_csv('SchoolData.csv')
 school_centroids = [[] for _ in range(len(schools.values))]
 generate_json("_pre")
 generate_map("_pre")
-for i in range(curr_week):
+for i in range(curr_week + 1):
     generate_json(i)
     generate_map(i)
