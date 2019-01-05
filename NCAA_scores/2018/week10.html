@@ -1,0 +1,3159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:dc="http://purl.org/dc/terms/" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgYCUlJACQMDVVZVDgIF"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+<script src="https://i.cdn.turner.com/ads/adfuel/ais/ncaa_3-ais.js"></script>
+<script src="https://i.cdn.turner.com/ads/ncaa_3/adfuel.min.js"></script>
+<meta name="google" content="notranslate" />
+<script type="text/javascript">var turner_metadata = {"article_name":"","author":"","championship":"","content_type":"scoreboard","division":"fbs","franchise":"","gender":"","node_id":"","page_name":"ncaa college football scores, schedule","school":"","section":"","sport":"football","sport_div":"football","subsection":"football","thumbnail_url":"https:\/\/www.ncaa.com\/modules\/custom\/casablanca_core\/img\/sportbanners\/football.png","url":"https:\/\/www.ncaa.com\/scoreboard\/football\/fbs\/2018\/10\/all-conf","date_created":"2018-08-21T15:00:00Z","date_published":"2019-01-04T09:00:00Z","date_modified":"2019-01-04T09:00:00Z"};</script>
+<link rel="canonical" href="https://www.ncaa.com/scoreboard/football/fbs/2018/10/all-conf" />
+<meta name="title" property="title" content="NCAA College Football Scores, Schedule | NCAA.com" />
+<meta name="og:type" property="og:type" content="WebPage" />
+<meta property="og:site_name" content="NCAA.com" />
+<meta name="og:title" property="og:title" content="NCAA College Football Scores, Schedule | NCAA.com" />
+<meta name="og:url" property="og:url" content="https://www.ncaa.com/scoreboard/football/fbs/2018/10/all-conf" />
+<meta name="twitter:url" content="https://www.ncaa.com/scoreboard/football/fbs/2018/10/all-conf" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://optanon.blob.core.windows.net/geoswitch/3b635ee0-9078-48f9-8913-29d0a7b0e780.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">function OptanonWrapper() { }</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebPage","url":"https:\/\/www.ncaa.com\/scoreboard\/football\/fbs\/2018\/10\/all-conf","dateCreated":"2018-08-21T15:00:00Z","datePublished":"2019-01-04T09:00:00Z","dateModified":"2019-01-04T09:00:00Z","publisher":{"@type":"Organization","name":"NCAA.com","logo":{"@type":"ImageObject","url":"https:\/\/www.ncaa.com\/modules\/custom\/casablanca_content\/img\/meta\/ncaa.60.png","width":61,"height":60}},"headline":"College Football FBS Scores","description":"Live college  scores, schedules and rankings from NCAA FBS Football","image":{"@type":"ImageObject","url":"https:\/\/www.ncaa.com\/modules\/custom\/casablanca_core\/img\/sportbanners\/football.png"},"author":{"@type":"Organization","name":"NCAA.com"},"creator":{"@type":"Organization","name":"NCAA.com"},"thumbnailUrl":"https:\/\/www.ncaa.com\/modules\/custom\/casablanca_core\/img\/sportbanners\/football.png","keywords":"scores, scoreboard, college, football, fbs, Week 10 - 2018, all-conf"}</script>
+<meta name="description" property="description" content="Live college  scores, schedules and rankings from NCAA FBS Football" />
+<meta name="url" property="url" content="https://www.ncaa.com/scoreboard/football/fbs/2018/10/all-conf" />
+<meta name="og:image" property="og:image" content="https://www.ncaa.com/modules/custom/casablanca_content/img/meta/share-default-med.jpg" />
+<meta name="og:description" property="og:description" content="Live college  scores, schedules and rankings from NCAA FBS Football" />
+<meta name="twitter:image" property="twitter:image" content="https://www.ncaa.com/modules/custom/casablanca_core/img/sportbanners/football.png" />
+<meta name="twitter:title" property="twitter:title" content="NCAA College Football Scores, Schedule | NCAA.com" />
+<meta name="twitter:description" property="twitter:description" content="Live college  scores, schedules and rankings from NCAA FBS Football" />
+<meta name="twitter:url" property="twitter:url" content="https://www.ncaa.com/scoreboard/football/fbs/2018/10/all-conf" />
+<link rel="dns-prefetch" href="//fastlane.rubiconproject.com" />
+<link rel="dns-prefetch" href="//optimized-by.rubiconproject.com" />
+<link rel="dns-prefetch" href="//ads.rubiconproject.com" />
+<link rel="dns-prefetch" href="//aax.amazon-adsystem.com" />
+<link rel="dns-prefetch" href="//c.amazon-adsystem.com" />
+<link rel="dns-prefetch" href="//rtax.criteo.com" />
+<link rel="dns-prefetch" href="//static.criteo.net" />
+<link rel="dns-prefetch" href="//bidder.criteo.com" />
+<link rel="dns-prefetch" href="https://platform.twitter.com" />
+<link rel="preconnect" href="https://data.ncaa.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://i.turner.ncaa.com" />
+<link rel="preconnect" href="https://turnip.cdn.turner.com" />
+<link rel="prefetch" href="/themes/custom/bespin/assets/fonts/Geogrotesque-Md.woff" />
+<link rel="prefetch" href="/themes/custom/bespin/assets/fonts/Geogrotesque-SmBd.woff" />
+<link rel="prefetch" href="/themes/custom/bespin/assets/fonts/Geogrotesque-Rg.woff" />
+<link rel="prefetch" href="/themes/custom/bespin/assets/fonts/Geogrotesque-Bd.woff" />
+<link rel="prefetch" href="//turnip.cdn.turner.com/top/assets/fonts/roboto/0/roboto-regular.woff2" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>NCAA College Football Scores, Schedule | NCAA.com</title>
+    <style media="all">
+@import url("/modules/custom/casablanca_sports/css/sport-subnav.css?pkrkmf");
+@import url("/core/modules/system/css/components/ajax-progress.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/align.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/autocomplete-loading.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/fieldgroup.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/container-inline.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/clearfix.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/details.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/hidden.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/item-list.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/js.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/nowrap.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/position-container.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/progress.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/reset-appearance.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/resize.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/sticky-header.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/system-status-counter.css?pkrkmf");
+@import url("/core/modules/system/css/components/system-status-report-counters.css?pkrkmf");
+@import url("/core/modules/system/css/components/system-status-report-general-info.css?pkrkmf");
+@import url("/core/modules/system/css/components/tabledrag.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/tablesort.module.css?pkrkmf");
+@import url("/core/modules/system/css/components/tree-child.module.css?pkrkmf");
+@import url("/core/assets/vendor/jquery.ui/themes/base/core.css?pkrkmf");
+@import url("/core/assets/vendor/jquery.ui/themes/base/datepicker.css?pkrkmf");
+@import url("/modules/custom/casablanca_stax/css/layout/layout-public.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-links.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-graphic.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-related-links.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-article.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-gamecenter.css?pkrkmf");
+</style>
+<style media="all">
+@import url("/modules/custom/casablanca_tiles/css/tile-ad.css?pkrkmf");
+@import url("/modules/custom/casablanca_tiles/css/tile-base.css?pkrkmf");
+@import url("/core/assets/vendor/jquery.ui/themes/base/menu.css?pkrkmf");
+@import url("/core/assets/vendor/jquery.ui/themes/base/autocomplete.css?pkrkmf");
+@import url("/modules/custom/casablanca_content/css/paragraphs.css?pkrkmf");
+@import url("/modules/custom/casablanca_footer/css/footer.css?pkrkmf");
+@import url("/core/assets/vendor/jquery.ui/themes/base/theme.css?pkrkmf");
+@import url("/modules/custom/casablanca_libraries/slick/slick.css?pkrkmf");
+@import url("/modules/custom/casablanca_libraries/slick/slick-theme.css?pkrkmf");
+@import url("/modules/custom/casablanca_scoreboard/css/ncaa-conference-selector.css?pkrkmf");
+@import url("/modules/custom/casablanca_scoreboard/css/ncaa-datenav.css?pkrkmf");
+@import url("/modules/custom/casablanca_scoreboard/css/ncaa-scoreboard.css?pkrkmf");
+@import url("/modules/custom/casablanca_core/css/gamePod.css?pkrkmf");
+@import url("/modules/custom/casablanca_libraries/prettyselect/jquery.prettyselect.min.css?pkrkmf");
+@import url("/modules/custom/casablanca_nav/css/ncaa-nav.css?pkrkmf");
+</style>
+<style media="all">
+@import url("/themes/custom/bespin/css/main.css?pkrkmf");
+</style>
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-scoreboard">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="ncaa-root" class="layout-container">
+    <header role="header" class="header-main clearfix">
+                    <div class="top-banner">
+                <div class="dfp" id="ad_bnr_atf_01"></div>
+
+            </div>
+                        <div class="region region-header">
+                
+                <nav id="ncaa-navigation" class="ncaa-navigation"><div id="nav-hamburger" class="hamburger-navigation line"><span></span><span></span><span></span></div><div class="main-navigation-inner"><a class="icon ncaa-main-logo" href="/">NCAA.com</a><div class="menu-live-container"><a href="/liveschedule" class="main-menu-item-live">Live Video</a></div><div class="drawer-navigation-inner"><ul class="main-navigation"><li class="menu-item-home"><a href="/" class="main-menu-item icon-home">Home</a></li><li class="menu-item-expandable"><span class="main-menu-item icon-sports expandable">Sports</span><div class="sub-nav"><div class="sports-nav"><div class="season"><h4>Fall</h4><ul><li><span class="sport-txt">Cross Country</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/cross-country-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/cross-country-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/fieldhockey" class="sport-link">Field Hockey</a></li><li class="no-gen"><a href="/sports/football" class="sport-link">Football</a></li><li><span class="sport-txt">Soccer</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/soccer-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/soccer-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/volleyball-women" class="sport-link">Volleyball - W</a></li><li class="no-gen"><a href="/sports/waterpolo-men" class="sport-link">Water Polo - M</a></li></ul></div><div class="season"><h4>Winter</h4><ul><li><span class="sport-txt">Basketball</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/basketball-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/basketball-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/bowling" class="sport-link">Bowling</a></li><li class="no-gen"><a href="/sports/fencing" class="sport-link">Fencing</a></li><li><span class="sport-txt">Gymnastics</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/gymnastics-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/gymnastics-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li><span class="sport-txt">Ice Hockey</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/icehockey-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/icehockey-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/rifle" class="sport-link">Rifle</a></li><li class="no-gen"><a href="/sports/skiing" class="sport-link">Skiing</a></li><li><span class="sport-txt">Swimming &amp; Diving</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/swimming-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/swimming-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li><span class="sport-txt">Track &amp; Field (I)</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/trackfield-indoor-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/trackfield-indoor-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/wrestling" class="sport-link">Wrestling</a></li></ul></div><div class="season"><h4>Spring</h4><ul><li class="no-gen"><a href="/sports/baseball" class="sport-link">Baseball</a></li><li class="no-gen"><a href="/sports/beach-volleyball" class="sport-link">Beach Volleyball</a></li><li><span class="sport-txt">Golf</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/golf-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/golf-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li><span class="sport-txt">Lacrosse</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/lacrosse-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/lacrosse-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/rowing" class="sport-link">Rowing</a></li><li class="no-gen"><a href="/sports/softball" class="sport-link">Softball</a></li><li><span class="sport-txt">Tennis</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/tennis-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/tennis-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li><span class="sport-txt">Track &amp; Field (O)</span><span class="sport-nav-carat"></span><div><span class="sport-gender"><a href="/sports/trackfield-outdoor-men"><span class="short">M</span><span class="full">Men</span></a></span><span class="sport-gender"><a href="/sports/trackfield-outdoor-women"><span class="short">W</span><span class="full">Women</span></a></span></div></li><li class="no-gen"><a href="/sports/volleyball-men" class="sport-link">Volleyball - M</a></li><li class="no-gen"><a href="/sports/waterpolo-women" class="sport-link">Water Polo - W</a></li></ul></div></div></div></li><li><a href="/video" class="main-menu-item icon-on_demand">Video</a></li><li><a href="/march-madness-live/watch" class="main-menu-item icon-march_madness_live">March Madness Live</a></li><li class="menu-item-expandable"><span class="main-menu-item icon-tickets expandable">Tickets</span><div class="sub-nav"><div class="tickets-nav"><div class="col"><h4>NCAA Championships</h4><ul><li><a href="/tickets" class="sport-link">NCAA Championships</a></li><li><a href="/tickets/basketball-men/d1" class="sport-link">Men&#039;s Final Four</a></li><li><a href="/tickets/volleyball-women/d1" class="sport-link">DI Women&#039;s Volleyball</a></li><li><a href="/tickets/football/fcs" class="sport-link">FCS Football</a></li><li><a href="/tickets/basketball-women/d1" class="sport-link">Women&#039;s Final Four</a></li></ul></div><div class="col"><h4>Primesport Tickets
+            <span>Affiliate Offers</span></h4><ul class="primesport"><li><a href="https://www.primesport.com/d/rose-bowl-game-tickets?utm_source=ncaa.com_turner&amp;utm_medium=referral&amp;utm_content=menu_navigation_d" class="sport-link external">Rose Bowl</a></li><li><a href="https://www.primesport.com/d/chick-fil-a-bowl-tickets?utm_source=ncaa.com_turner&amp;utm_medium=referral&amp;utm_content=menu_navigation" class="sport-link external">Peach Bowl</a></li><li><a href="https://www.primesport.com/d/fiestabowl?utm_source=ncaa.com_turner&amp;utm_medium=referral&amp;utm_content=menu_navigation_dropdown&amp;utm_" class="sport-link external">Fiesta Bowl</a></li><li><a href="https://www.primesport.com/s/college-bowl-tickets?utm_source=ncaa.com_turner&amp;utm_medium=referral&amp;utm_content=menu_navigation_dro" class="sport-link external">Bowl Game Schedule</a></li></ul></div></div></div></li><li class="menu-item-expandable"><span class="main-menu-item icon-schools expandable">Schools</span><div class="sub-nav"><div id="ncaa-nav-schools" class="schools-nav"><button class="school-search-goto">All Schools</button><div class="school-autocomplete"><div class="school-finder-container"><div class="svg-icon-glass"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Shape Copy</title><path d="M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.436-3.87 5.946 5.946 0 1 0-5.946 5.947 5.92 5.92 0 0 0 3.87-1.436l.247.256v.722L14.637 16 16 14.637l-4.565-4.574zm-5.489 0c-2.278 0-4.116-1.839-4.116-4.117S3.668 1.83 5.946 1.83s4.117 1.839 4.117 4.116-1.84 4.117-4.117 4.117z" fill="#fff" fill-rule="evenodd"/></svg></div><div class="js-form-item form-item js-form-type-textfield form-item- js-form-item- form-no-label"><input placeholder="Search all schools" class="school-finder form-text" data-action="redirect" type="text" size="60" maxlength="128" /></div></div></div><div class="trending"><h4>Trending Schools</h4><ul><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/kentucky.svg"><a href="/schools/kentucky">Kentucky</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/alabama.svg"><a href="/schools/alabama">Alabama</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/north-dakota-st.svg"><a href="/schools/north-dakota-st">North Dakota St.</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/auburn.svg"><a href="/schools/auburn">Auburn</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/georgia.svg"><a href="/schools/georgia">Georgia</a></li></ul><ul><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/southern-california.svg"><a href="/schools/southern-california">Southern California</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/james-madison.svg"><a href="/schools/james-madison">James Madison</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/duke.svg"><a href="/schools/duke">Duke</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/clemson.svg"><a href="/schools/clemson">Clemson</a></li><li><img class="school-icon" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/lsu.svg"><a href="/schools/lsu">LSU</a></li></ul></div></div></div></li><li><a href="http://www.shopncaasports.com" class="main-menu-item icon-shop" target="_blank">Shop</a></li></ul></div></div></nav>
+                
+
+    </div>
+
+    </header>
+    <main role="main" class="clearfix">
+        <a id="main-content" tabindex="-1"></a>
+        <div id="ncaa-content" class="layout-content">
+                                <div id="block-bespin-content">
+    
+        
+            
+<nav class="sport-subnav content-header">
+    <div class="subnav-heading">
+        <h3>FBS</h3>
+        <h2 class="page-title">Football</h2>
+    </div>
+        <aside class="subnav-divisions">
+        <select id="subnav-division-selector" data-sport="football-fbs">
+                    <option value="fbs" selected="selected">FBS</option>
+                    <option value="fcs">FCS</option>
+                    <option value="d2">DII</option>
+                    <option value="d3">DIII</option>
+                </select>
+    </aside>
+        <div class="subnav-main">
+        <div id="subnav-flex-menu" class="subnav-menu-items">
+                                        <a href="/sports/football/fbs" data-menu-id="0" target="_self">HOME</a>
+                                                        <div class="active-item" data-menu-id="1" target="_self">SCORES</div>
+                                                        <a href="/rankings/football/fbs" data-menu-id="2" target="_self">RANKINGS</a>
+                                                        <a href="/standings/football/fbs" data-menu-id="3" target="_self">STANDINGS</a>
+                                                        <a href="/stats/football/fbs" data-menu-id="4" target="_self">STATS</a>
+                                                        <a href="/video/football" data-menu-id="5" target="_self">VIDEO</a>
+                                                        <a href="/history/football/fbs" data-menu-id="6" target="_self">HISTORY</a>
+                                                        <a href="/news/football/article/2017-12-03/college-football-bowl-schedule-scores-tv-listings-matchup" data-menu-id="7" target="_self">BOWLS</a>
+                                        </div>
+        <div class="subnav-ellipsis" style="display: none;"></div>
+        <div id="subnav-overflow" class="overflow-menu"></div>
+        <hr class="divider"/>
+    </div>
+        </nav>
+
+
+<div id="scoreboard">
+
+    <div id="scoreboardFilter">
+        <div class="conference-selector-wrapper js-form-item form-item js-form-type-select form-item- js-form-item- form-no-label">
+        <select id="ncaa-conference-selector" class="ncaa-dropdown form-select"><option value="all-conf" selected="selected">All Conferences</option><option value="american-athletic">AAC</option><option value="atlantic-coast">ACC</option><option value="big-12">Big 12</option><option value="big-sky">Big Sky</option><option value="big-south">Big South</option><option value="big-ten">Big Ten</option><option value="conference-usa">C-USA</option><option value="colonial">CAA</option><option value="fcs-independent">IND</option><option value="fbs-independent">IND</option><option value="mid-american">MAC</option><option value="mid-eastern">MEAC</option><option value="mountain-west">MWC</option><option value="mvfc">Missouri Valley</option><option value="northeast">NEC</option><option value="ovc">Ohio Valley</option><option value="pac-12">Pac-12</option><option value="patriot">Patriot League</option><option value="pioneer">Pioneer</option><option value="southeastern">SEC</option><option value="southwestern">SWAC</option><option value="southern">Southern</option><option value="southland">Southland</option><option value="sun-belt">Sun Belt</option></select>
+        </div>
+
+        <div id="scoreboardDateNav" class="weekSelector">
+
+    <div id="scoreboardDateNav-header"><span class="current">Weeks</span></div>
+
+    <div id="scoreboardDateNav-datesContainer">
+        <div class="scoreboardDateNav-dates">
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/01/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">1</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/02/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">2</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/03/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">3</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/04/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">4</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/05/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">5</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/06/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">6</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/07/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">7</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/08/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">8</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/09/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">9</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date selected hasGames">
+                    <a href="/scoreboard/football/fbs/2018/10/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">10</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/11/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">11</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/12/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">12</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/13/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">13</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/14/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">14</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/15/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">15</span>
+                        </span>
+                    </a>
+                </div>
+                            <div class="scoreboardDateNav-date  hasGames">
+                    <a href="/scoreboard/football/fbs/2018/P/all-conf">
+                        <span class="scoreboardDateNav-period">
+                            <span class="scoreboardDateNav-dayNumber">P</span>
+                        </span>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div>
+
+    </div>
+
+    <div class="layout--has-sidebar">
+        <div id="scoreboardContent" class="layout--content-left">
+            <div id="scoreboardGames" class="gamePod_content">
+            <div class="gamePod_content-division">
+            <h6>Tuesday, October 30, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/10/30/kent-st-bowling-green">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/kent-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Kent St.</span>
+                <span class="gamePod-game-team-score">35</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/bowling-green.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Bowling Green</span>
+                <span class="gamePod-game-team-score">28</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/10/30/miami-oh-buffalo">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/miami-oh.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Miami (OH)</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/buffalo.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Buffalo</span>
+                <span class="gamePod-game-team-score">51</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+            <div class="gamePod_content-division">
+            <h6>Wednesday, October 31, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/10/31/ball-st-toledo">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ball-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Ball St.</span>
+                <span class="gamePod-game-team-score">13</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/toledo.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Toledo</span>
+                <span class="gamePod-game-team-score">45</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+            <div class="gamePod_content-division">
+            <h6>Thursday, November 01, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/01/ohio-western-mich">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ohio.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Ohio</span>
+                <span class="gamePod-game-team-score">59</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/western-mich.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Western Mich.</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/01/northern-ill-akron">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/northern-ill.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Northern Ill.</span>
+                <span class="gamePod-game-team-score">36</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/akron.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Akron</span>
+                <span class="gamePod-game-team-score">26</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/01/temple-ucf">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/temple.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Temple</span>
+                <span class="gamePod-game-team-score">40</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ucf.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">12</span>
+
+                <span class="gamePod-game-team-name">UCF</span>
+                <span class="gamePod-game-team-score">52</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+            <div class="gamePod_content-division">
+            <h6>Friday, November 02, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/02/pittsburgh-virginia">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/pittsburgh.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Pittsburgh</span>
+                <span class="gamePod-game-team-score">23</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/virginia.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">25</span>
+
+                <span class="gamePod-game-team-name">Virginia</span>
+                <span class="gamePod-game-team-score">13</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/02/western-ky-middle-tenn">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/western-ky.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Western Ky.</span>
+                <span class="gamePod-game-team-score">10</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/middle-tenn.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Middle Tenn.</span>
+                <span class="gamePod-game-team-score">29</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/02/colorado-arizona">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/colorado.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Colorado</span>
+                <span class="gamePod-game-team-score">34</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/arizona.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Arizona</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+            <div class="gamePod_content-division">
+            <h6>Saturday, November 03, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/rutgers-wisconsin">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/rutgers.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Rutgers</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/wisconsin.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Wisconsin</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/nebraska-ohio-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/nebraska.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Nebraska</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ohio-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">10</span>
+
+                <span class="gamePod-game-team-name">Ohio St.</span>
+                <span class="gamePod-game-team-score">36</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/oklahoma-st-baylor">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/oklahoma-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Oklahoma St.</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/baylor.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Baylor</span>
+                <span class="gamePod-game-team-score">35</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/central-mich-eastern-mich">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/central-mich.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Central Mich.</span>
+                <span class="gamePod-game-team-score">7</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/eastern-mich.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Eastern Mich.</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/memphis-east-carolina">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/memphis.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Memphis</span>
+                <span class="gamePod-game-team-score">59</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/east-carolina.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">East Carolina</span>
+                <span class="gamePod-game-team-score">41</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/iowa-st-kansas">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/iowa-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">24</span>
+
+                <span class="gamePod-game-team-name">Iowa St.</span>
+                <span class="gamePod-game-team-score">27</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/kansas.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Kansas</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/syracuse-wake-forest">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/syracuse.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">19</span>
+
+                <span class="gamePod-game-team-name">Syracuse</span>
+                <span class="gamePod-game-team-score">41</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/wake-forest.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Wake Forest</span>
+                <span class="gamePod-game-team-score">24</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/south-carolina-ole-miss">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/south-carolina.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">South Carolina</span>
+                <span class="gamePod-game-team-score">48</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ole-miss.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Ole Miss</span>
+                <span class="gamePod-game-team-score">44</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/air-force-army">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/air-force.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Air Force</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/army.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Army</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/texas-am-auburn">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/texas-am.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">20</span>
+
+                <span class="gamePod-game-team-name">Texas A&amp;M</span>
+                <span class="gamePod-game-team-score">24</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/auburn.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Auburn</span>
+                <span class="gamePod-game-team-score">28</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/louisville-clemson">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/louisville.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Louisville</span>
+                <span class="gamePod-game-team-score">16</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/clemson.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">2</span>
+
+                <span class="gamePod-game-team-name">Clemson</span>
+                <span class="gamePod-game-team-score">77</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/michigan-st-maryland">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/michigan-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Michigan St.</span>
+                <span class="gamePod-game-team-score">24</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/maryland.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Maryland</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/georgia-tech-north-carolina">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/georgia-tech.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Georgia Tech</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/north-carolina.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">North Carolina</span>
+                <span class="gamePod-game-team-score">28</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/san-jose-st-wyoming">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/san-jose-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">San Jose St.</span>
+                <span class="gamePod-game-team-score">9</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/wyoming.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Wyoming</span>
+                <span class="gamePod-game-team-score">24</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/texas-st-georgia-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/texas-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Texas St.</span>
+                <span class="gamePod-game-team-score">40</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/georgia-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Georgia St.</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/south-ala-arkansas-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/south-ala.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">South Ala.</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/arkansas-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Arkansas St.</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/ga-southern-la-monroe">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ga-southern.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Ga. Southern</span>
+                <span class="gamePod-game-team-score">25</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/la-monroe.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">La.-Monroe</span>
+                <span class="gamePod-game-team-score">44</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/marshall-southern-miss">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/marshall.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Marshall</span>
+                <span class="gamePod-game-team-score">24</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/southern-miss.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Southern Miss.</span>
+                <span class="gamePod-game-team-score">26</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/liberty-massachusetts">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final (3OT)</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/liberty.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Liberty</span>
+                <span class="gamePod-game-team-score">59</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/massachusetts.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Massachusetts</span>
+                <span class="gamePod-game-team-score">62</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/kansas-st-tcu">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/kansas-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Kansas St.</span>
+                <span class="gamePod-game-team-score">13</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/tcu.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">TCU</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/minnesota-illinois">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/minnesota.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Minnesota</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/illinois.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Illinois</span>
+                <span class="gamePod-game-team-score">55</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/florida-st-north-carolina-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/florida-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Florida St.</span>
+                <span class="gamePod-game-team-score">28</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/north-carolina-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">21</span>
+
+                <span class="gamePod-game-team-name">North Carolina St.</span>
+                <span class="gamePod-game-team-score">47</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/west-virginia-texas">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/west-virginia.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">13</span>
+
+                <span class="gamePod-game-team-name">West Virginia</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/texas.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">17</span>
+
+                <span class="gamePod-game-team-name">Texas</span>
+                <span class="gamePod-game-team-score">41</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/la-lafayette-troy">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/la-lafayette.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Louisiana</span>
+                <span class="gamePod-game-team-score">16</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/troy.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Troy</span>
+                <span class="gamePod-game-team-score">26</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/navy-cincinnati">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/navy.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Navy</span>
+                <span class="gamePod-game-team-score">0</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/cincinnati.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Cincinnati</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/utep-rice">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/utep.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UTEP</span>
+                <span class="gamePod-game-team-score">34</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/rice.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Rice</span>
+                <span class="gamePod-game-team-score">26</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/iowa-purdue">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/iowa.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">16</span>
+
+                <span class="gamePod-game-team-name">Iowa</span>
+                <span class="gamePod-game-team-score">36</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/purdue.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Purdue</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/tulane-south-fla">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/tulane.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Tulane</span>
+                <span class="gamePod-game-team-score">41</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/south-fla.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">South Fla.</span>
+                <span class="gamePod-game-team-score">15</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/georgia-kentucky">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/georgia.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">6</span>
+
+                <span class="gamePod-game-team-name">Georgia</span>
+                <span class="gamePod-game-team-score">34</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/kentucky.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">9</span>
+
+                <span class="gamePod-game-team-name">Kentucky</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/boston-college-virginia-tech">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/boston-college.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">22</span>
+
+                <span class="gamePod-game-team-name">Boston College</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/virginia-tech.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Virginia Tech</span>
+                <span class="gamePod-game-team-score">21</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/penn-st-michigan">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/penn-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">14</span>
+
+                <span class="gamePod-game-team-name">Penn St.</span>
+                <span class="gamePod-game-team-score">7</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/michigan.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">5</span>
+
+                <span class="gamePod-game-team-name">Michigan</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/missouri-florida">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/missouri.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Missouri</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/florida.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">11</span>
+
+                <span class="gamePod-game-team-name">Florida</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/charlotte-tennessee">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/charlotte.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Charlotte</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/tennessee.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Tennessee</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/alcorn-new-mexico-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/alcorn.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Alcorn St.</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/new-mexico-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">New Mexico St.</span>
+                <span class="gamePod-game-team-score">52</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/utah-arizona-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/utah.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">15</span>
+
+                <span class="gamePod-game-team-name">Utah</span>
+                <span class="gamePod-game-team-score">20</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/arizona-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Arizona St.</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/appalachian-st-coastal-caro">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/appalachian-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Appalachian St.</span>
+                <span class="gamePod-game-team-score">23</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/coastal-caro.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Coastal Caro.</span>
+                <span class="gamePod-game-team-score">7</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/duke-miami-fl">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/duke.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Duke</span>
+                <span class="gamePod-game-team-score">20</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/miami-fl.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Miami (FL)</span>
+                <span class="gamePod-game-team-score">12</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/uconn-tulsa">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/uconn.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UConn</span>
+                <span class="gamePod-game-team-score">19</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/tulsa.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Tulsa</span>
+                <span class="gamePod-game-team-score">49</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/houston-smu">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/houston.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Houston</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/smu.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">SMU</span>
+                <span class="gamePod-game-team-score">45</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/notre-dame-northwestern">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/notre-dame.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">4</span>
+
+                <span class="gamePod-game-team-name">Notre Dame</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/northwestern.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Northwestern</span>
+                <span class="gamePod-game-team-score">21</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/ucla-oregon">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/ucla.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UCLA</span>
+                <span class="gamePod-game-team-score">21</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/oregon.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Oregon</span>
+                <span class="gamePod-game-team-score">42</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/fla-atlantic-fiu">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/fla-atlantic.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Fla. Atlantic</span>
+                <span class="gamePod-game-team-score">49</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/fiu.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">FIU</span>
+                <span class="gamePod-game-team-score">14</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/utsa-uab">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/utsa.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UTSA</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/uab.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UAB</span>
+                <span class="gamePod-game-team-score">52</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/louisiana-tech-mississippi-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/louisiana-tech.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Louisiana Tech</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/mississippi-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">18</span>
+
+                <span class="gamePod-game-team-name">Mississippi St.</span>
+                <span class="gamePod-game-team-score">45</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/oklahoma-texas-tech">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/oklahoma.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">7</span>
+
+                <span class="gamePod-game-team-name">Oklahoma</span>
+                <span class="gamePod-game-team-score">51</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/texas-tech.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Texas Tech</span>
+                <span class="gamePod-game-team-score">46</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/alabama-lsu">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/alabama.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">1</span>
+
+                <span class="gamePod-game-team-name">Alabama</span>
+                <span class="gamePod-game-team-score">29</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/lsu.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">3</span>
+
+                <span class="gamePod-game-team-name">LSU</span>
+                <span class="gamePod-game-team-score">0</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/stanford-washington">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/stanford.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Stanford</span>
+                <span class="gamePod-game-team-score">23</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/washington.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Washington</span>
+                <span class="gamePod-game-team-score">27</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/southern-california-oregon-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/southern-california.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Southern California</span>
+                <span class="gamePod-game-team-score">38</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/oregon-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Oregon St.</span>
+                <span class="gamePod-game-team-score">21</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/san-diego-st-new-mexico">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/san-diego-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">San Diego St.</span>
+                <span class="gamePod-game-team-score">31</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/new-mexico.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">New Mexico</span>
+                <span class="gamePod-game-team-score">23</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/byu-boise-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/byu.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">BYU</span>
+                <span class="gamePod-game-team-score">16</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/boise-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Boise St.</span>
+                <span class="gamePod-game-team-score">21</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/fresno-st-unlv">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/fresno-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">23</span>
+
+                <span class="gamePod-game-team-name">Fresno St.</span>
+                <span class="gamePod-game-team-score">48</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/unlv.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">UNLV</span>
+                <span class="gamePod-game-team-score">3</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/03/california-washington-st">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/california.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">California</span>
+                <span class="gamePod-game-team-score">13</span>
+            </li>
+
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/washington-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank">8</span>
+
+                <span class="gamePod-game-team-name">Washington St.</span>
+                <span class="gamePod-game-team-score">19</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+            <div class="gamePod_content-division">
+            <h6>Sunday, November 04, 2018</h6>
+
+            <div class="gamePod_content-pod_container">
+                                    <div class="gamePod gamePod-type-game status-final">
+    <a
+        class="gamePod-link"
+        href="/game/football/fbs/2018/11/04/utah-st-hawaii">
+        <!-- SEED: 99 -->
+
+        <div class="gamePod-status">Final</div>
+
+        <div class="gamePod-description">
+            
+            
+            
+                    </div>
+
+        <ul class="gamePod-game-teams">
+            <li class="winner">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/utah-st.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Utah St.</span>
+                <span class="gamePod-game-team-score">56</span>
+            </li>
+
+            <li class="">
+                <div class="gamePod-game-team-logo-container">
+                                            <img class="gamePod-game-team-logo" src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/hawaii.svg" />
+                                    </div>
+
+                <span class="gamePod-game-team-rank"></span>
+
+                <span class="gamePod-game-team-name">Hawaii</span>
+                <span class="gamePod-game-team-score">17</span>
+            </li>
+        </ul>
+    </a>
+</div>
+                            </div>
+        </div>
+    </div>
+
+        </div>
+        <section class="stax-layout layout-size--sidebar"><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="ad" data-slot="1">
+            <aside class="tile-ad">
+    <h5>Advertisement</h5>
+    <div class="dfp" id="ad_rect_atf_01"></div>
+</aside>
+
+
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="graphic" data-slot="1">
+            <article class="tile-graphic">
+    <div class="tile-image-container" style="background-color: #f6f8fa;">
+        <a href="/news/football/article/2017-12-03/college-football-bowl-schedule-scores-tv-listings-matchup"><img class="tile-image" src="https://www.ncaa.com/sites/default/files/public/tile-images/graphic/tua%20oranges_0.png"/></a>
+    </div>
+    <div class="tile-body-container">
+        <a href='/news/football/article/2017-12-03/college-football-bowl-schedule-scores-tv-listings-matchup'><h4 class="tile-cta">BOWL SCHEDULE<span></span></h4></a>
+    </div>
+</article>
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="gamecenter" data-slot="1">
+            <article class="tile-gamecenter not-rendered" data-config="1747397716"></article>
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="article" data-slot="1">
+            <article class="tile-article tile-container">
+    <a href="/news/football/article/college-football-national-championship-history">
+        <div  class="tile-image-container ">
+                        <img class="tile-image" src="https://www.ncaa.com/sites/default/files/public/tile-images/article/USATSI_10528843_168380788_lowres.jpg"/>
+                    </div>
+    </a>
+        <a href="/news/football/article/college-football-national-championship-history">
+        <h2 class="tile-headline">College football national championship history</h2>
+    </a>
+    <ul class="tile-related-links"></ul>
+</article>
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="article" data-slot="1">
+            <article class="tile-article tile-container">
+    <a href="/news/football/article/college-football-tv-schedule-game-times-preview">
+        <div  class="tile-image-container ">
+                        <img class="tile-image" src="https://www.ncaa.com/sites/default/files/public/tile-images/article/USATSI_11724627_168380788_lowres.jpg"/>
+                    </div>
+    </a>
+        <a href="/news/football/article/college-football-tv-schedule-game-times-preview">
+        <h2 class="tile-headline">College football TV schedule and game times</h2>
+    </a>
+    <ul class="tile-related-links"></ul>
+</article>
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="graphic" data-slot="1">
+            <article class="tile-graphic">
+    <div class="tile-image-container" style="background-color: #f6f8fa;">
+        <a href="http://www.ncaa.com/stats/football/fbs"><img class="tile-image" src="https://www.ncaa.com/sites/default/files/public/tile-images/graphic/USATSI_11722381_168380788_lowres.jpg"/></a>
+    </div>
+    <div class="tile-body-container">
+        <a href='http://www.ncaa.com/stats/football/fbs'><h4 class="tile-cta">TRACK LATEST FBS STATS<span></span></h4></a>
+    </div>
+</article>
+
+
+    </div>
+</div>
+</div><div class="stax-tier-outer">
+<div class="stax-tier-inner wrap one-across">
+    <div class="stax-tier-slot stax-tile" data-tile-type="links" data-slot="1">
+            <div class="tile-links">
+    <ul class="tile-links-list">
+    <h2 class="links_title">Football News</h2>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-05/2019-national-championship-game-date-time-tv-channel-college-football-playoff">2019 National Championship Game: Date, time, TV channel</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-05/how-every-conference-has-fared-years-college-football-bowl-games">How every conference has fared in this year’s bowl games</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-05/2018-19-college-football-bowl-schedule-scores-tv-listings-matchup">2018-19 bowl schedule and information</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-05/alabama-clemson-all-time-history-most-recent-meetings-scores">Alabama-Clemson: All-time history, and meetings</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-05/college-football-rankings-top-25-scores-schedule-bowl-games">College Football rankings: Top 25 scores, schedule for bowl games</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/ncaa/article/2019-01-04/13-greatest-winning-streaks-ncaa-history">13 great win streaks in NCAA history</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-04/virginia-football-george-welsh-dies">Longtime Virginia football coach George Welsh dies</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-03/cfp-national-championship-alabama-defense-prepares-one-more-test">Alabama defense preps for one more test against Clemson in CFP final</a>
+                    </li>
+            <li class="title-link tile-link-article">
+                            <a href="/news/football/article/2019-01-03/clemson-vs-alabama-tigers-prepare-cfp-national-championship">Clemson prepares for CFP final motivated by last year&#039;s loss to the Tide</a>
+                    </li>
+            <li class="title-link tile-link-video">
+                            <a href="/video/football/2019-01-02/fbs-versus-cfp-clemson-alabama-national-championship">Alabama and Clemson to resume college football&#039;s biggest playoff rivalry</a>
+                    </li>
+        </ul>
+</div>
+
+
+    </div>
+</div>
+</div></section>
+    </div>
+
+</div>
+
+    </div>
+
+
+                    </div>
+
+            </main>
+    <footer role="footer" class="clearfix">
+                        <nav role="navigation" aria-labelledby="block-ncaafooternavigationmenu-menu" id="block-ncaafooternavigationmenu">
+            
+  <h2 class="visually-hidden" id="block-ncaafooternavigationmenu-menu">NCAA Footer Navigation Menu</h2>
+  
+
+        
+<div class="footer-ad clearfix">
+    <div class="footer-wrapper">
+                    <div id="ad_nfs_btf_01" class="dfp"></div>
+            <div id="ad_nfs_btf_02" class="dfp"></div>
+            <div id="ad_nfs_btf_03" class="dfp"></div>
+            </div>
+</div>
+<div class="footer clearfix">
+    <div class="footer-wrapper">
+                            
+                          <ul class="footer-menu clearfix">
+                                                                    <li class="footer--links">
+                <span class="footer-menu--link-category"> Featured Sections </span>
+                                                                
+                          <ul class="footer-menu clearfix footer--link">
+                                                                    <li class="footer-menu--link-item">
+                <a href="/march-madness" data-drupal-link-system-path="node/841330">March Madness</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="https://bracketchallenge.ncaa.com/">Bracket Challenge Game</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/mobile" data-drupal-link-system-path="node/841297">NCAA on Mobile</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/video" data-drupal-link-system-path="video">Video</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/news/ncaa/article/2013-09-17/ncaa-championship-brackets" data-drupal-link-system-path="node/806746">Brackets</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/news/ncaa/article/2013-09-17/ncaa-rankings" data-drupal-link-system-path="node/806748">Rankings</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/newsletter-signup" data-drupal-link-system-path="newsletter-signup">Newsletters</a>
+                                          </li>
+                        </ul>
+                  
+                            </li>
+                                                        <li class="footer--links">
+                <span class="footer-menu--link-category"> Experience It Live </span>
+                                                                
+                          <ul class="footer-menu clearfix footer--link">
+                                                                    <li class="footer-menu--link-item">
+                <a href="/tickets" data-drupal-link-system-path="tickets">Championship Tickets</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/exchange" data-drupal-link-system-path="node/840977">NCAA Ticket Exchange</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="https://www.primesport.com/About/NCAAExp">The NCAA Experience</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="https://www.youtube.com/ncaaondemand">NCAA Vault</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/travel">NCAA Travel</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/tickets/basketball-men/d1" data-drupal-link-system-path="node/831931">DI Men&#039;s Basketball Tickets</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/march-madness/schedule">March Madness Schedule</a>
+                                          </li>
+                        </ul>
+                  
+                            </li>
+                                                        <li class="footer--links">
+                <span class="footer-menu--link-category"> NCAA Championships </span>
+                                                                
+                          <ul class="footer-menu clearfix footer--link">
+                                                                    <li class="footer-menu--link-item">
+                <a href="/championships" data-drupal-link-system-path="node/841051">Championship Central</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/shop">Championship Store</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/final-four" data-drupal-link-system-path="node/841170">2019 Final Four</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/frozenfour">2019 Frozen Four</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/cws">2019 Men&#039;s College World Series</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/womensfinalfour">2019 Women&#039;s Final Four</a>
+                                          </li>
+                        </ul>
+                  
+                            </li>
+                                                        <li class="footer--links">
+                <span class="footer-menu--link-category"> About the NCAA </span>
+                                                                
+                          <ul class="footer-menu clearfix footer--link">
+                                                                    <li class="footer-menu--link-item">
+                <a href="http://www.ncaa.org/">NCAA.org</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="http://www.ncaahallofchampions.org/index.php">Hall of Champions</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="http://www.ncaa.org/student-athletes/future">Eligibility Center</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/news/ncaa/article/2011-02-25/corporate-champions-and-partners" data-drupal-link-system-path="node/807191">Corporate Champions &amp; Partners</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/media" data-drupal-link-system-path="node/841187">Broadcast Media and Services</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="http://on.ncaa.com/2pAbX4M">Careers in College Athletics</a>
+                                          </li>
+                                                        <li class="footer-menu--link-item">
+                <a href="/elite-90" data-drupal-link-system-path="node/841050">Elite 90</a>
+                                          </li>
+                        </ul>
+                  
+                            </li>
+                        </ul>
+                  
+                <div class="footer-submenu clearfix">
+            <ul class="footer-submenu">
+                <li class="footer-submenu"><a href="/contact-us">Feedback</a></li>
+                <li class="footer-submenu"><a href="/tos">Terms of Service</a></li>
+                <li class="footer-submenu"><a href="/closed-captioning">Accessibility and Closed Captioning</a></li>
+                <li class="footer-submenu">
+
+                    <a id="cnn_cnsnt_trst">
+                        <script type="text/javascript" src="//consent.truste.com/notice?domain=turner.com&c=cnn_cnsnt_trst&text=true&country=us"></script>
+                        </a><img src="https://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/logo_ad_choices_footer.png" alt="" border="0" class="cnn_ie6png" height="12" style="margin:0pt 0pt 0pt 4px;" width="12"/>
+
+                </li>
+                <li class="footer-submenu"><a href="/privacy">Privacy Policy</a></li>
+                <li class="footer-submenu"><a href="/rss">RSS</a></li>
+            </ul>
+        </div>
+        <a href="http://www.turner.com" class="footer-logo" target="_blank">Turner</a>
+        <div class="footer-copy">
+            &copy; 2019 NCAA | Turner Sports Interactive, Inc. <br>
+        NCAA.com is a part of Bleacher Report - Turner Sports Network, part of the Turner Sports and Entertainment Network.
+        </div>
+    </div>
+</div>
+
+  </nav>
+
+
+                        <div class="mobile-persistent-bottom">
+            <span id="bottom_sync" class="_fwph">
+  <form id="_fw_form_bottom_sync" style="display:none"> 
+   <input type="hidden" name="_fw_input_bottom_sync" id="_fw_input_bottom_sync" value="w=320&h=50&envp=g_js&sflg=-nrpl&slau=320x50_sync" /> 
+  </form> 
+  <span id="_fw_container_bottom_sync" class="_fwac">
+    <div class="dfp" id="ad_bnr_atf_02"></div>
+  </span>  
+</span>
+
+        </div>
+            </footer>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"scoreboard\/football\/fbs\/2018\/10\/all-conf","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","core":{"build":"casablanca-master-372"},"casablanca_draco_dfp":{"ad_manager":{"registries":["https:\/\/s.cdn.turner.com\/ads\/ncaa_3\/default.js"],"ad_unit_map_content_type":{"ad_unit_map":"other"},"defer_queue_registry":false,"test_mode":0,"ps_dfp":{"primary_sport":"football"}}},"scoreboard":{"datasource":"https:\/\/data.ncaa.com\/casablanca","baseDatasource":"https:\/\/data.ncaa.com","sport":"football","division":"fbs","calendar":[{"year":"2018","actualWeek":"1","week":"1","weekPad":"01","games":90},{"year":"2018","actualWeek":"2","week":"2","weekPad":"02","games":78},{"year":"2018","actualWeek":"3","week":"3","weekPad":"03","games":72},{"year":"2018","actualWeek":"4","week":"4","weekPad":"04","games":62},{"year":"2018","actualWeek":"5","week":"5","weekPad":"05","games":58},{"year":"2018","actualWeek":"6","week":"6","weekPad":"06","games":56},{"year":"2018","actualWeek":"7","week":"7","weekPad":"07","games":55},{"year":"2018","actualWeek":"8","week":"8","weekPad":"08","games":55},{"year":"2018","actualWeek":"9","week":"9","weekPad":"09","games":56},{"year":"2018","actualWeek":"10","week":"10","weekPad":"10","games":62},{"year":"2018","actualWeek":"11","week":"11","weekPad":"11","games":62},{"year":"2018","actualWeek":"12","week":"12","weekPad":"12","games":67},{"year":"2018","actualWeek":"13","week":"13","weekPad":"13","games":64},{"year":"2018","actualWeek":"14","week":"14","weekPad":"14","games":16},{"year":"2018","actualWeek":"15","week":"15","weekPad":"15","games":1},{"year":"2018","actualWeek":"P","week":"P","weekPad":"P","games":40}],"conference":"all-conf","currentDate":{"year":"2018","week":"10"},"sortByTop25":true,"path":"modules\/custom\/casablanca_scoreboard"},"game_config":{"game":{"1747397716":{"structured_data":"https:\/\/data.ncaa.com\/casablanca","type":"game","division_long":"FBS","division_short":"fbs","slug":"\/game\/football\/fbs\/2019\/01\/07\/clemson-alabama","away_team_logo":"https:\/\/i.turner.ncaa.com\/sites\/default\/files\/images\/logos\/schools\/bgd\/clemson.svg","home_team_logo":"https:\/\/i.turner.ncaa.com\/sites\/default\/files\/images\/logos\/schools\/bgd\/alabama.svg","title":"CFP National Championship: Clemson vs. Alabama (Jan. 7)","img_location":"https:\/\/www.ncaa.com\/sites\/default\/files\/public\/styles\/large\/public-s3\/tile-images\/gamecenter\/GettyImages-1075817246_0.jpg?itok=X4F74EOL","img_type":"custom"}}},"json":["https:\/\/data.ncaa.com\/casablanca\/schedule\/football\/fbs\/2018\/10\/conference.json","https:\/\/data.ncaa.com\/casablanca\/schedule\/football\/fbs\/2018\/schedule-all-conf.json","https:\/\/data.ncaa.com\/casablanca\/scoreboard\/football\/fbs\/2018\/10\/scoreboard.json"],"user":{"uid":0,"permissionsHash":"e6fe709684412c36b762e2c38d7f3a0119646d577180e069017c7d5cf5fc6710"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/core/assets/vendor/underscore/underscore-min.js?v=1.8.3"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/assets/vendor/backbone/backbone-min.js?v=1.2.3"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.6.3"></script>
+<script src="/core/misc/drupal.js?v=8.6.3"></script>
+<script src="/core/misc/drupal.init.js?v=8.6.3"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-1-7-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/tabbable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/ie-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-active-element-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-blur-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=1.12.1"></script>
+<script src="/modules/custom/casablanca_core/js/polyfills.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/ncaaUserAgent.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/external-link-fixer.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/utils.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_draco_dfp/js/AdsManager.js?pkrkmf"></script>
+<script src="//agility.ncaa.com/turner/ncaa-prod/Bootstrap.js"></script>
+<script src="/themes/custom/bespin/js/ad-check.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_analytics/js/ncaa_analytics.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_footer/js/footer.js?pkrkmf"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/datepicker-min.js?v=1.12.1"></script>
+<script src="/modules/custom/casablanca_libraries/handlebars/handlebars-v4.0.5.min.js?v=4.0.5"></script>
+<script src="/modules/custom/casablanca_libraries/moment/moment.min.js?v=2.17.1"></script>
+<script src="/modules/custom/casablanca_libraries/moment_timezone/moment-timezone-with-data.min.js?v=0.5.13"></script>
+<script src="/modules/custom/casablanca_core/js/handlebarsHelpers.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_libraries/slick/slick.min.js?v=1.9.0"></script>
+<script src="/modules/custom/casablanca_core/templates/compiled/gamePod-game.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/templates/compiled/gamePod-event.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/gamePod.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/gamePod/model/game.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/gamePod/model/event.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/gamePod/view/game.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_core/js/gamePod/view/event.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/base.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/app.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/router.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/lib/pollingModel.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/state.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/footballCurrent.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/periodDay.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/periodWeek.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/periodCollection.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/scoreboardFeedGamesCollection.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/model/scoreboardFeed.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/templates/compiled/dateSelector.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/templates/compiled/date.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/templates/compiled/weekSelector.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/templates/compiled/week.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/helpers/dateSelector.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/view/dateSelector.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/view/date.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/view/weekSelector.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/view/week.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/view/gamesCollection.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_libraries/prettyselect/jquery.prettyselect.min.js?v=1.0.1"></script>
+<script src="/modules/custom/casablanca_scoreboard/js/scoreboard-ps.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_sports/js/sport-subnav.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_tiles/js/tile-links.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_tiles/js/tile-graphic.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_tiles/js/tile-article.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_tiles/js/tile-gamecenter.js?pkrkmf"></script>
+<script src="/modules/custom/casablanca_nav/js/casablanca-nav.js?pkrkmf"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/position-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/menu-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/autocomplete-min.js?v=1.12.1"></script>
+<script src="/modules/custom/casablanca_libraries/fuse/fuse.min.js?v=3.0.5"></script>
+<script src="/modules/custom/casablanca_schools/js/autocomplete.js?pkrkmf"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b4c08c65aa","applicationID":"103177932","transactionName":"MldQZkoDDUUAAk0NXwsdc1FMCwxYTiVLEUAEXm5RWRECVA0AVwdROkFRXUoHAVkAE104cwpcRkBXDg9TEz1qB18XV1BdWRAHdQ4PTRZfCV5XQBVcBVkOFVsFXAlxXVxMBw1C","queueTime":0,"applicationTime":518,"atts":"HhBTEAIZHks=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
